@@ -1,0 +1,9914 @@
+{
+	"info": {
+		"_postman_id": "9ce5f200-68e0-4f7e-96e6-5a11098f3eca",
+		"name": "Lumen Demo V1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20959069"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "aswanth",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "aswanth@bpract.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "referral",
+							"value": "irshadpk",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/register",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "irshad@bpract.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/login",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/refresh",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/logout",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blog Categories Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/blog-categories",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"blog-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blog Categories Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "new category",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "new category",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/blog-categories",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"blog-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blog Categories Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/blog-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"blog-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blog Categories Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/blog-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"blog-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blog Categories Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/blog-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"blog-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blog Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/blog",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"blog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blog Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "title",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "document_url",
+							"type": "file",
+							"src": "UImjj2lhd/Cloud Lumen table structure (4).pdf"
+						},
+						{
+							"key": "blogimage_url",
+							"type": "file",
+							"src": "eETzy0tS5/moneytigo.png"
+						},
+						{
+							"key": "meta_keywords",
+							"value": "ok",
+							"type": "text"
+						},
+						{
+							"key": "meta_description",
+							"value": "po",
+							"type": "text"
+						},
+						{
+							"key": "short_description",
+							"value": "dd",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "qwer",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/blog",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"blog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blog Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/blog/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"blog",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blog Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "document_url",
+							"value": "a",
+							"type": "text"
+						},
+						{
+							"key": "blogimage_url",
+							"value": "a",
+							"type": "text"
+						},
+						{
+							"key": "meta_keywords",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "meta_description",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "short_description",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "document_url",
+							"type": "file",
+							"src": "/home/bpract/Downloads/not work (1).pdf"
+						},
+						{
+							"key": "blogimage_url",
+							"type": "file",
+							"src": "/home/bpract/Pictures/rrsendgrid.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/blog/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"blog",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blog Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/blog/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"blog",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Faq Categories Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/faq-categories",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"faq-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Faq Categories Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "faq cat",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "lkhgh",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/faq-categories",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"faq-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Faq Categories Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/faq-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"faq-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Faq Categories Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/faq-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"faq-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Faq Categories Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/faq-categories/1/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"faq-categories",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Faq Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/faq",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"faq"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Faq Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "category_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "question",
+							"value": "question",
+							"type": "text"
+						},
+						{
+							"key": "answer",
+							"value": "answer",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/faq",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"faq"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Faq Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/faq/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"faq",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Faq Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "question",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "answer",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/faq/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"faq",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Faq Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/faq/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"faq",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Email Index",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/emails",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"emails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Email Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "subject",
+							"value": "new sub",
+							"type": "text"
+						},
+						{
+							"key": "is_broadcast",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "attachments_url",
+							"type": "file",
+							"src": "Xa19Xo8qk/rrsendgrid.png"
+						},
+						{
+							"key": "content",
+							"value": "asdf",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "[1,2]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/emails",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"emails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Email Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/emails/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"emails",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Email Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "is_broadcast",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "attachments_url",
+							"value": "a",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "[1,2,3]",
+							"type": "text"
+						},
+						{
+							"key": "attachments_url",
+							"type": "file",
+							"src": "/home/bpract/Pictures/rrsendgrid.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/emails/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"emails",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Email Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/emails/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"emails",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Article Category Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/article-categories",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"article-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Article Categories Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "new",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "new",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/article-categories",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"article-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Article Categories Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/article-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"article-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Article Categories Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "changes",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "changes",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/article-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"article-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Article Categories Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/article-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"article-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Articles Index ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/articles",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Article Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "category_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "new",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "new",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/articles",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Articles Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/articles/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"articles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Article Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "changes",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "changes",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/articles/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"articles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Articles Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/articles/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"articles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket department index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket department store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket department show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket department update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket department delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-ticket-department/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-ticket-department",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket categories index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-ticket-categories",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-ticket-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket categories store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-ticket-categories",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-ticket-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket categories show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-ticket-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-ticket-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket categories update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-ticket-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-ticket-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket categories delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-ticket-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-ticket-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket priorities index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket priorities store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "had",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "had1",
+							"type": "text"
+						},
+						{
+							"key": "sort_order",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-ticket-priorities",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-ticket-priorities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket priorities show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket priorities update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-ticket-priorities/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-ticket-priorities",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket priorities delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-ticket-priorities/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-ticket-priorities",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket canned responses index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-ticket-canned-responses",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-ticket-canned-responses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket canned responses store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "re",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "re",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "re start",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-ticket-canned-responses",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-ticket-canned-responses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket canned responses show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket canned responses update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "peace1",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "peace",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "peace",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-ticket-canned-responses/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-ticket-canned-responses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support ticket canned responses delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-ticket-canned-responses/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-ticket-canned-responses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support tickets index ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support tickets store ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "TEST",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "testing",
+							"type": "text"
+						},
+						{
+							"key": "priority_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "department_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "yes",
+							"type": "text"
+						},
+						{
+							"key": "attachments_url",
+							"type": "file",
+							"src": "/home/bpract/Downloads/fd8de78425331d952617faf70ce189f8.jpg"
+						},
+						{
+							"key": "content",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-tickets",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support tickets show ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-tickets/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-tickets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support tickets update ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-tickets/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-tickets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support tickets delete ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/support-tickets/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"support-tickets",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tool video index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tool video store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tool video show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tool video update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "eeeee",
+							"type": "text"
+						},
+						{
+							"key": "video_tool_url",
+							"type": "file",
+							"src": "/home/bpract/Downloads/sample-mp4-file-small.mp4"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/tool-video/2?=&=",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"tool-video",
+						"2"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tool video delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tool document index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/tool-document",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"tool-document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tool document store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tool document show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tool document update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tool document delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/tool-document/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"tool-document",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Online Store Products Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/online-store",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"online-store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Online Store Product Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/online-store/33",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"online-store",
+						"33"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My Subscriptions ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/my-subscriptions/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"my-subscriptions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business Builder Subscriptions Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "92",
+							"type": "text"
+						},
+						{
+							"key": "period_month",
+							"value": "3 months",
+							"type": "text"
+						},
+						{
+							"key": "custom_days",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "business_builder_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/bb-subscriptions",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"bb-subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business Builder Order History",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/my-bb-subscriptions",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"my-bb-subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business Builder Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/business-builder",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"business-builder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business Builder Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "bb",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "bv",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/business-builder",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"business-builder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business Builder Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/business-builder/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"business-builder",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business Builder Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "2000",
+							"type": "text"
+						},
+						{
+							"key": "bv",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/business-builder/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"business-builder",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business Builder Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/business-builder/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"business-builder",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business Builder Materials",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/bb-materials",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"bb-materials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Product Purchase",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "date",
+							"value": "28/09/2001",
+							"type": "text"
+						},
+						{
+							"key": "total_amount",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "payment_type",
+							"value": "coinpayment",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "[34,36]",
+							"type": "text"
+						},
+						{
+							"key": "product_price_id",
+							"value": "[15,19]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/product-purchase",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"product-purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Category Index",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/product-categories",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"product-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Category Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Category New",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/product-categories",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"product-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Category show",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/product-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"product-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Category Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "changed",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/product-categories/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"product-categories",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Category Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/product-categories/7",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"product-categories",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/products",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "shibin product",
+							"type": "text"
+						},
+						{
+							"key": "sort_order",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "meta_description",
+							"value": "des",
+							"type": "text"
+						},
+						{
+							"key": "product_category_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "asdf",
+							"type": "text"
+						},
+						{
+							"key": "meta_keywords",
+							"value": "asdf",
+							"type": "text"
+						},
+						{
+							"key": "product_url",
+							"value": "asd",
+							"type": "text"
+						},
+						{
+							"key": "available_from",
+							"value": "05/01/2000",
+							"type": "text"
+						},
+						{
+							"key": "available_to",
+							"value": "30/11/2021",
+							"type": "text"
+						},
+						{
+							"key": "payment_types",
+							"value": "{\"name\":\"John\", \"age\":30, \"car\":null}",
+							"type": "text"
+						},
+						{
+							"key": "subscription_type",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "life_time_access",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "no_of_days",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "life_time_price",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "life_time_business_volume",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "parent_product_id",
+							"value": "33",
+							"type": "text"
+						},
+						{
+							"key": "price[]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "price[]",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "validity[]",
+							"value": "1 month",
+							"type": "text"
+						},
+						{
+							"key": "validity[]",
+							"value": "2 month",
+							"type": "text"
+						},
+						{
+							"key": "business_volume[]",
+							"value": "32",
+							"type": "text"
+						},
+						{
+							"key": "business_volume[]",
+							"value": "23",
+							"type": "text"
+						},
+						{
+							"key": "video",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/bpract/Pictures/passportSS.png"
+						},
+						{
+							"key": "doc",
+							"type": "file",
+							"src": "/home/bpract/Downloads/interview.docx"
+						},
+						{
+							"key": "sample_doc",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "short_description",
+							"value": "abcd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/products",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/products/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "latest productio",
+							"type": "text"
+						},
+						{
+							"key": "sort_order",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "meta_description",
+							"value": "des",
+							"type": "text"
+						},
+						{
+							"key": "product_category_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "asdf",
+							"type": "text"
+						},
+						{
+							"key": "meta_keywords",
+							"value": "asdf",
+							"type": "text"
+						},
+						{
+							"key": "product_url",
+							"value": "asd",
+							"type": "text"
+						},
+						{
+							"key": "available_from",
+							"value": "05/01/2000",
+							"type": "text"
+						},
+						{
+							"key": "available_to",
+							"value": "30/11/2021",
+							"type": "text"
+						},
+						{
+							"key": "payment_types",
+							"value": "{\"name\":\"John\", \"age\":30, \"car\":null}",
+							"type": "text"
+						},
+						{
+							"key": "subscription_type",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "life_time_access",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "no_of_days",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "life_time_price",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "life_time_business_volume",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "parent_product_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "price[]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "price[]",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "validity[]",
+							"value": "1 month",
+							"type": "text"
+						},
+						{
+							"key": "validity[]",
+							"value": "2 month",
+							"type": "text"
+						},
+						{
+							"key": "business_volume[]",
+							"value": "32",
+							"type": "text"
+						},
+						{
+							"key": "business_volume[]",
+							"value": "23",
+							"type": "text"
+						},
+						{
+							"key": "video",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "doc",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "sample_doc",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/products/5",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"products",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/products/9",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"products",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Material Categories Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/material-categories",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"material-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Material Categories Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "material",
+							"type": "text"
+						},
+						{
+							"key": "sort_order",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/material-categories",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"material-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Material Categories Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/material-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"material-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Material Categories Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "changed",
+							"type": "text"
+						},
+						{
+							"key": "sort_order",
+							"value": "23",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/material-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"material-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Material Categories Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/material-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"material-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Materials Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/materials",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"materials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Materials Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "category_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "doc",
+							"type": "file",
+							"src": "/home/bpract/Downloads/ticket (2).pdf"
+						},
+						{
+							"key": "video",
+							"value": "https://vimeo.com/253989945",
+							"type": "text"
+						},
+						{
+							"key": "doc_title",
+							"value": "new world",
+							"type": "text"
+						},
+						{
+							"key": "doc_access_time",
+							"value": "24/05/2023",
+							"type": "text"
+						},
+						{
+							"key": "video_title",
+							"value": "new video",
+							"type": "text"
+						},
+						{
+							"key": "video_access_time",
+							"value": "24/05/2023",
+							"type": "text"
+						},
+						{
+							"key": "product_id[]",
+							"value": "9",
+							"type": "text"
+						},
+						{
+							"key": "product_id[]",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/materials",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"materials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Materials Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/materials/25",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"materials",
+						"25"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Material Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "cahnged name",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "changed desc",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "doc",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "video",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "doc_title",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "doc_access_time",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "video_title",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "video_access_time",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "product_ids",
+							"value": "[4]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/materials/5",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"materials",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Materials Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/materials/27",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"materials",
+						"27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Events Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/events",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Events Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "access_scope",
+							"value": "public",
+							"type": "text"
+						},
+						{
+							"key": "event_type",
+							"value": "webinar",
+							"type": "text"
+						},
+						{
+							"key": "host",
+							"value": "irshad",
+							"type": "text"
+						},
+						{
+							"key": "topic",
+							"value": "global warming",
+							"type": "text"
+						},
+						{
+							"key": "img",
+							"type": "file",
+							"src": "ydGFsOvEh/passportSS.png"
+						},
+						{
+							"key": "date_time",
+							"value": "05/05/2024 10:45",
+							"type": "text"
+						},
+						{
+							"key": "duration",
+							"value": "11:50",
+							"type": "text"
+						},
+						{
+							"key": "timezone",
+							"value": "kolkata",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "great event",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/events",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Events Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/events/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"events",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Events Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "access_scope",
+							"value": "private",
+							"type": "text"
+						},
+						{
+							"key": "event_type",
+							"value": "twitter",
+							"type": "text"
+						},
+						{
+							"key": "host",
+							"value": "sunburn",
+							"type": "text"
+						},
+						{
+							"key": "topic",
+							"value": "asdf",
+							"type": "text"
+						},
+						{
+							"key": "img",
+							"type": "file",
+							"src": "zOAiO6VDI/passportSS.png"
+						},
+						{
+							"key": "date_time",
+							"value": "05/05/2030 10:45",
+							"type": "text"
+						},
+						{
+							"key": "duration",
+							"value": "12:50",
+							"type": "text"
+						},
+						{
+							"key": "timezone",
+							"value": "asia",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "dj event",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "20/05/2000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/events/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"events",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Events Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/events/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"events",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Coupons Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/coupons",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Coupons Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_ids",
+							"value": "[4]",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "trends coupon",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "tc",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "offer closes soon",
+							"type": "text"
+						},
+						{
+							"key": "discount",
+							"value": "10.02",
+							"type": "text"
+						},
+						{
+							"key": "total_amount",
+							"value": "489.98",
+							"type": "text"
+						},
+						{
+							"key": "uses_per_coupon",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "uses_per_customer",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "start_date",
+							"value": "24/05/2022",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "26/05/2022",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/coupons",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Coupons Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/coupons/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"coupons",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Coupons Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "product_ids",
+							"value": "[5]",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "changed",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "changed",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "changed",
+							"type": "text"
+						},
+						{
+							"key": "discount",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "total_amount",
+							"value": "490",
+							"type": "text"
+						},
+						{
+							"key": "uses_per_coupon",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "uses_per_customer",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "start_date",
+							"value": "01/06/2022",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "01/06/2023",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/coupons/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"coupons",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Coupons Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/coupons/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"coupons",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Reviews Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/user-reviews",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"user-reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Reviews Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "irshad",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "my review",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "It is a good product",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/user-reviews",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"user-reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Reviews Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/user-reviews/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"user-reviews",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Review Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "changed",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "changed",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "changed",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/user-reviews/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"user-reviews",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Review Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/user-reviews/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"user-reviews",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Subscription Categories Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/product-subscription-categories",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"product-subscription-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Subscription Category Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "subscription cat ",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "description ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/product-subscription-categories",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"product-subscription-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Subscription Category Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/product-subscription-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"product-subscription-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Subscription Category Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "change",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/product-subscription-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"product-subscription-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Subscription Categories Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/product-subscription-categories/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"product-subscription-categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Subscriptions Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/product-subscriptions",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"product-subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Subscriptions Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "note",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "certified_date",
+							"value": "01/02/2022",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/product-subscriptions",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"product-subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Subscriptions Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/product-subscriptions/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"product-subscriptions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product-subscriptions Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "note",
+							"value": "cdr",
+							"type": "text"
+						},
+						{
+							"key": "certified_date",
+							"value": "25/05/2022",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/product-subscriptions/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"product-subscriptions",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Subscriptions Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/product-subscriptions/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"product-subscriptions",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business Builder Subscriptions Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/business-builder-subscriptions",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"business-builder-subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business Builder Subscription Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "10.2",
+							"type": "text"
+						},
+						{
+							"key": "period_month",
+							"value": "9 month",
+							"type": "text"
+						},
+						{
+							"key": "custom_days",
+							"value": "12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/business-builder-subscriptions",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"business-builder-subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business Builder Subscription Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/business-builder-subscriptions/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"business-builder-subscriptions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business Builder Subscription Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "period_month",
+							"value": "12 month",
+							"type": "text"
+						},
+						{
+							"key": "custom_days",
+							"value": "14",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/business-builder-subscriptions/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"business-builder-subscriptions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business Builder Subscription Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/business-builder-subscriptions/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"business-builder-subscriptions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sub Admin User Groups Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/sub-admin-user-groups",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"sub-admin-user-groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sub Admin User Groups Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "test group",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "permission_string",
+							"value": "test group",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/sub-admin-user-groups",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"sub-admin-user-groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sub Admin User Groups Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/sub-admin-user-groups/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"sub-admin-user-groups",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sub Admin User Groups Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "permission_string",
+							"value": "change",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/sub-admin-user-groups/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"sub-admin-user-groups",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sub Admin User Groups DELETE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/sub-admin-user-groups/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"sub-admin-user-groups",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sub Admin Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/sub-admins",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"sub-admins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sub Admin Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "asdf",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "asdf",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "8529637410",
+							"type": "text"
+						},
+						{
+							"key": "group_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "newasdf@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "is_impersonation",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "product_ids",
+							"value": "[5,33]",
+							"type": "text"
+						},
+						{
+							"key": "department_ids",
+							"value": "[1]",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/sub-admins",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"sub-admins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sub Admin Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/sub-admins/5",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"sub-admins",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sub Admin Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "asdf",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "asdf",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "8529637410",
+							"type": "text"
+						},
+						{
+							"key": "group_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "newasdf@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "is_impersonation",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "product_ids",
+							"value": "[5]",
+							"type": "text"
+						},
+						{
+							"key": "department_ids",
+							"value": "[1]",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/sub-admins/5",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"sub-admins",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sub Admin Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/sub-admins/5",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"sub-admins",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand company index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-company-details",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-company-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand company store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "haaafi",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "kochii",
+							"type": "text"
+						},
+						{
+							"key": "logo",
+							"type": "file",
+							"src": "/home/bpract/Downloads/istockphoto-654142668-1024x1024.jpg"
+						},
+						{
+							"key": "favicon",
+							"type": "file",
+							"src": "/home/bpract/Downloads/painting-machines-icon-black-color-flat-style-vector-21158620.jpg"
+						},
+						{
+							"key": "side_bar_logo",
+							"type": "file",
+							"src": "/home/bpract/Downloads/painting-machines-icon-black-color-flat-style-vector-21158620.jpg"
+						},
+						{
+							"key": "terms_and_conditions_template",
+							"type": "file",
+							"src": "/home/bpract/Downloads/istockphoto-654142668-1024x1024.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-company-details",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-company-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand company show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-company-details/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-company-details",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand company update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "ark",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "clt",
+							"type": "text"
+						},
+						{
+							"key": "logo",
+							"type": "file",
+							"src": "/home/bpract/Downloads/painting-machines-icon-black-color-flat-style-vector-21158620.jpg"
+						},
+						{
+							"key": "favicon",
+							"type": "file",
+							"src": "/home/bpract/Downloads/painting-machines-icon-black-color-flat-style-vector-21158620.jpg"
+						},
+						{
+							"key": "side_bar_logo",
+							"type": "file",
+							"src": "/home/bpract/Downloads/painting-machines-icon-black-color-flat-style-vector-21158620.jpg"
+						},
+						{
+							"key": "terms_and_conditions_template",
+							"type": "file",
+							"src": "/home/bpract/Downloads/sample.pdf"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-company-details/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-company-details",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand company delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-company-details/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-company-details",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand user guidance index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-user-guidance",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-user-guidance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand user guidance  store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "2c11",
+							"type": "text"
+						},
+						{
+							"key": "url",
+							"value": "http://2cmlm.demo/123",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "2cccccc123",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/home/bpract/Downloads/istockphoto-654142668-1024x1024.jpg"
+						},
+						{
+							"key": "attachments",
+							"type": "file",
+							"src": "/home/bpract/Downloads/sample.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-user-guidance",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-user-guidance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand user guidance  show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-user-guidance/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-user-guidance",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand user guidance  update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "vai22",
+							"type": "text"
+						},
+						{
+							"key": "url",
+							"value": "http://11111",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "haaai",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/home/bpract/Downloads/painting-machines-icon-black-color-flat-style-vector-21158620.jpg"
+						},
+						{
+							"key": "attachments",
+							"type": "file",
+							"src": "/home/bpract/Downloads/sample.pdf"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-user-guidance/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-user-guidance",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand user guidance  delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-user-guidance/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-user-guidance",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand get started section index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-get-started-section",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-get-started-section"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand get started section store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "aswathi",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "ready to go",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-get-started-section",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-get-started-section"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand get started section show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-get-started-section/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-get-started-section",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand get started section update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "vipin koroth",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "happy",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-get-started-section/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-get-started-section",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand get started section delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-get-started-section/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-get-started-section",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand get started article index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-get-started-article",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-get-started-article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand get started article store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "section_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "menu_name",
+							"value": "goes",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "trip",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-get-started-article/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-get-started-article",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand get started article show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-get-started-article/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-get-started-article",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand get started article update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "section_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "menu_name",
+							"value": "irsha",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "long",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-get-started-article/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-get-started-article",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand get started article delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/brand-get-started-article/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"brand-get-started-article",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Settings email notification user side",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/settings-email-notification",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"settings-email-notification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/profile",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User blog index",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/user-blog",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"user-blog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User blog show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/user-blog/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"user-blog",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support tickets user index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/support-tickets",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"support-tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support tickets user store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "subject",
+							"value": "education",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "education",
+							"type": "text"
+						},
+						{
+							"key": "priority_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "department_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "no",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "no",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "attachments_url",
+							"type": "file",
+							"src": "/home/bpract/Downloads/pexels-cesar-perez-733745.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/support-tickets",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"support-tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support tickets user show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/support-tickets/5",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"support-tickets",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support tickets user update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "subject",
+							"value": "education1",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "education1",
+							"type": "text"
+						},
+						{
+							"key": "priority_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "department_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "no",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "no",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "attachments_url",
+							"type": "file",
+							"src": "/home/bpract/Downloads/fd8de78425331d952617faf70ce189f8.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/support-tickets/5",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"support-tickets",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Support tickets user delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/support-tickets/5",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"support-tickets",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User articles index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/user-articles",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"user-articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User articles show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/user-articles/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"user-articles",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "vmp",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "vv",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "967475667",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": "68585",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "bpract",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "india",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "kerala",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "calicut",
+							"type": "text"
+						},
+						{
+							"key": "facebook",
+							"value": "bbb",
+							"type": "text"
+						},
+						{
+							"key": "twitter",
+							"value": "bb",
+							"type": "text"
+						},
+						{
+							"key": "instagram",
+							"value": "bbb",
+							"type": "text"
+						},
+						{
+							"key": "telegram",
+							"value": "456464646",
+							"type": "text"
+						},
+						{
+							"key": "medium",
+							"value": "23423424",
+							"type": "text"
+						},
+						{
+							"key": "whatsapp",
+							"value": "24242422342",
+							"type": "text"
+						},
+						{
+							"key": "scope_phone",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "scope_email",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "scope_facebook",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "scope_twitter",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "scope_instagram",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "scope_whatsapp",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "scope_telegram",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "scope_medium",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "profile_image",
+							"type": "file",
+							"src": "/home/bpract/Pictures/profileroutes.png"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/profile",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Payout Wallet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "payout_wallet",
+							"value": "666",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://lumen_mlm.demo/api/user/user-profile-payout-wallet",
+					"protocol": "http",
+					"host": [
+						"lumen_mlm",
+						"demo"
+					],
+					"path": [
+						"api",
+						"user",
+						"user-profile-payout-wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User 2FA Email settings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "2fa",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "email_notification_settings",
+							"value": "[1,2,3,4,5]",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://lumen_mlm.demo/api/user/user-profile-fa-emailsettings",
+					"protocol": "http",
+					"host": [
+						"lumen_mlm",
+						"demo"
+					],
+					"path": [
+						"api",
+						"user",
+						"user-profile-fa-emailsettings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "abcd@bpract.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/forgot-password",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Combo Products Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/combo-products",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"combo-products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Combo Products Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "latest product",
+							"type": "text"
+						},
+						{
+							"key": "sort_order",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "meta_description",
+							"value": "des",
+							"type": "text"
+						},
+						{
+							"key": "product_category_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "asdf",
+							"type": "text"
+						},
+						{
+							"key": "meta_keywords",
+							"value": "asdf",
+							"type": "text"
+						},
+						{
+							"key": "product_url",
+							"value": "asd",
+							"type": "text"
+						},
+						{
+							"key": "available_from",
+							"value": "05/01/2000",
+							"type": "text"
+						},
+						{
+							"key": "available_to",
+							"value": "30/11/2021",
+							"type": "text"
+						},
+						{
+							"key": "payment_types",
+							"value": "{\"name\":\"John\", \"age\":30, \"car\":null}",
+							"type": "text"
+						},
+						{
+							"key": "validity",
+							"value": "[\"1 month\",\"2 month\"]",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "[1, 2]",
+							"type": "text"
+						},
+						{
+							"key": "business_volume",
+							"value": "[1, 2]",
+							"type": "text"
+						},
+						{
+							"key": "subscription_type",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "life_time_access",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "no_of_days",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "life_time_price",
+							"value": "200",
+							"type": "text"
+						},
+						{
+							"key": "life_time_business_volume",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "parent_product_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "product_ids",
+							"value": "[10,2]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/combo-products",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"combo-products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Combo Products Show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/combo-products/14",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"combo-products",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Combo Products Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "sort_order",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "meta_description",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "product_category_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "meta_keywords",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "product_url",
+							"value": "change",
+							"type": "text"
+						},
+						{
+							"key": "available_from",
+							"value": "05/05/2000",
+							"type": "text"
+						},
+						{
+							"key": "available_to",
+							"value": "30/05/2021",
+							"type": "text"
+						},
+						{
+							"key": "payment_types",
+							"value": "{\"name\":\"John\", \"age\":30, \"car\":null}",
+							"type": "text"
+						},
+						{
+							"key": "validity",
+							"value": "[\"3 month\",\"4 month\"]",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "[3, 4]",
+							"type": "text"
+						},
+						{
+							"key": "business_volume",
+							"value": "[3, 4]",
+							"type": "text"
+						},
+						{
+							"key": "subscription_type",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "product_ids",
+							"value": "[1,10]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/combo-products/14",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"combo-products",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Combo Products Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/combo-products/14",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"combo-products",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Sales Report",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/sales-report?start_date=01/06/2022&end_date=09/06/2022&user_id=1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"sales-report"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "01/06/2022"
+						},
+						{
+							"key": "end_date",
+							"value": "09/06/2022"
+						},
+						{
+							"key": "user_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "business-builder-subscription-sales",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/business-builder-subscription-sales",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"business-builder-subscription-sales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin settings rank",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://lumendev.demo/api/admin/settings-rank/2?rank_name=211212&condition2_personal_rank=1&condition2_count=1&condition2_leg=1&condition3_personal_rank=1&condition3_count=1&condition3_leg=1&condition4_personal_rank=1&condition4_count=1&condition4_leg=1&condition5_personal_rank=1&condition5_count=1&condition5_leg=1&team_volume=1500&consecutive=11",
+					"protocol": "http",
+					"host": [
+						"lumendev",
+						"demo"
+					],
+					"path": [
+						"api",
+						"admin",
+						"settings-rank",
+						"2"
+					],
+					"query": [
+						{
+							"key": "rank_name",
+							"value": "211212"
+						},
+						{
+							"key": "condition2_personal_rank",
+							"value": "1"
+						},
+						{
+							"key": "condition2_count",
+							"value": "1"
+						},
+						{
+							"key": "condition2_leg",
+							"value": "1"
+						},
+						{
+							"key": "condition3_personal_rank",
+							"value": "1"
+						},
+						{
+							"key": "condition3_count",
+							"value": "1"
+						},
+						{
+							"key": "condition3_leg",
+							"value": "1"
+						},
+						{
+							"key": "condition4_personal_rank",
+							"value": "1"
+						},
+						{
+							"key": "condition4_count",
+							"value": "1"
+						},
+						{
+							"key": "condition4_leg",
+							"value": "1"
+						},
+						{
+							"key": "condition5_personal_rank",
+							"value": "1"
+						},
+						{
+							"key": "condition5_count",
+							"value": "1"
+						},
+						{
+							"key": "condition5_leg",
+							"value": "1"
+						},
+						{
+							"key": "team_volume",
+							"value": "1500"
+						},
+						{
+							"key": "consecutive",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin first order bonus",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://lumendev.demo/api/admin/first-order-bonus",
+					"protocol": "http",
+					"host": [
+						"lumendev",
+						"demo"
+					],
+					"path": [
+						"api",
+						"admin",
+						"first-order-bonus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin binarytree",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://lumendev.demo/api/admin/binarytree",
+					"protocol": "http",
+					"host": [
+						"lumendev",
+						"demo"
+					],
+					"path": [
+						"api",
+						"admin",
+						"binarytree"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin sponsortree",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://lumendev.demo/api/admin/sponsortree",
+					"protocol": "http",
+					"host": [
+						"lumendev",
+						"demo"
+					],
+					"path": [
+						"api",
+						"admin",
+						"sponsortree"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin first order bonus",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://lumendev.demo/api/admin/first-order-bonus/1?validity=3 month&price=1500",
+					"protocol": "http",
+					"host": [
+						"lumendev",
+						"demo"
+					],
+					"path": [
+						"api",
+						"admin",
+						"first-order-bonus",
+						"1"
+					],
+					"query": [
+						{
+							"key": "validity",
+							"value": "3 month"
+						},
+						{
+							"key": "price",
+							"value": "1500"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin tree",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "root",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://lumendev.demo/api/admin/tree",
+					"protocol": "http",
+					"host": [
+						"lumendev",
+						"demo"
+					],
+					"path": [
+						"api",
+						"admin",
+						"tree"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin binarysettings index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://lumendev.demo/api/admin/binarysettings",
+					"protocol": "http",
+					"host": [
+						"lumendev",
+						"demo"
+					],
+					"path": [
+						"api",
+						"admin",
+						"binarysettings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin binary settings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://lumendev.demo/api/admin/binarysettings/1?binary_volume_capping=10&binary_bonus_capping=10&binary_matching=10",
+					"protocol": "http",
+					"host": [
+						"lumendev",
+						"demo"
+					],
+					"path": [
+						"api",
+						"admin",
+						"binarysettings",
+						"1"
+					],
+					"query": [
+						{
+							"key": "binary_volume_capping",
+							"value": "10"
+						},
+						{
+							"key": "binary_bonus_capping",
+							"value": "10"
+						},
+						{
+							"key": "binary_matching",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin refferal bonussettings index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://lumendev.demo/api/admin/refferalbonussettings",
+					"protocol": "http",
+					"host": [
+						"lumendev",
+						"demo"
+					],
+					"path": [
+						"api",
+						"admin",
+						"refferalbonussettings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin refferal bonus settings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://lumendev.demo/api/admin/refferalbonussettings/1?referral_bonus=15",
+					"protocol": "http",
+					"host": [
+						"lumendev",
+						"demo"
+					],
+					"path": [
+						"api",
+						"admin",
+						"refferalbonussettings",
+						"1"
+					],
+					"query": [
+						{
+							"key": "referral_bonus",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin bronzachievement settings index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://lumendev.demo/api/admin/bronzachievementsettings",
+					"protocol": "http",
+					"host": [
+						"lumendev",
+						"demo"
+					],
+					"path": [
+						"api",
+						"admin",
+						"bronzachievementsettings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin bronz achievement settings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://lumendev.demo/api/admin/bronzachievementsettings/2?bonus_amount=25",
+					"protocol": "http",
+					"host": [
+						"lumendev",
+						"demo"
+					],
+					"path": [
+						"api",
+						"admin",
+						"bronzachievementsettings",
+						"2"
+					],
+					"query": [
+						{
+							"key": "bonus_amount",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin business builder report",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/business-builder-report",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"business-builder-report"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "04/05/2022",
+							"disabled": true
+						},
+						{
+							"key": "end_date",
+							"value": "20/06/2022",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "ark",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin product sales report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/product-sales-report",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"product-sales-report"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "11/11/2022",
+							"disabled": true
+						},
+						{
+							"key": "end_date",
+							"value": "13/11/2022",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "vy",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin joining report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/joining-report",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"joining-report"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "10/06/2022",
+							"disabled": true
+						},
+						{
+							"key": "end_date",
+							"value": "11/06/2022",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "vy",
+							"disabled": true
+						},
+						{
+							"key": "country",
+							"value": "US",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile Password change",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "123456",
+						"type": "text"
+					},
+					{
+						"key": "_method",
+						"value": "PUT",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/profile-password",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"profile-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile Payout Wallet Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "payout_wallet",
+							"value": "2222",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/profile-payout-wallet",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"profile-payout-wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile fa emailsettings Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "2fa",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "email_notification_settings",
+							"value": "[1,2,3]",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/profile-fa-emailsettings",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"profile-fa-emailsettings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin settings-email-notification index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/settings-email-notification",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"settings-email-notification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User dashboard index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/dashboard",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Product statistics",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/subscription-statistics",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"subscription-statistics"
+					],
+					"query": [
+						{
+							"key": "product_id",
+							"value": "4",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Dashboard index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/dashboard",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin genealogy index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/genealogy",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"genealogy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin genealogy store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "vjs",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "vjs",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "vjs@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "leg",
+							"value": "Left",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/genealogy",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"genealogy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User genealogy index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/genealogy",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"genealogy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User genealogy store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "chronic",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "chronic@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "leg",
+							"value": "Right",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/user/genealogy",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"genealogy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile Cover image Change",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cover_image",
+							"type": "file",
+							"src": "/home/bpract/Pictures/rrsendgrid.png"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/profile-cover-image",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"profile-cover-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin change user username",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "vaishnavmp",
+							"type": "text"
+						},
+						{
+							"key": "new_username",
+							"value": "vaishnav123",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/change-user-username",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"change-user-username"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin change user password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "vaishnav123",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "vaishnav",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/change-user-password",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"change-user-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin side of user profile view",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/user-profile-view/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user-profile-view",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin side of user profile update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "ghilli",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "ghilli",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "463465546",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "Male",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": "53534",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "kochii",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "IN",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "Kerala",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "clt",
+							"type": "text"
+						},
+						{
+							"key": "facebook",
+							"value": "ff",
+							"type": "text"
+						},
+						{
+							"key": "twitter",
+							"value": "ff",
+							"type": "text"
+						},
+						{
+							"key": "instagram",
+							"value": "ff",
+							"type": "text"
+						},
+						{
+							"key": "telegram",
+							"value": "ff",
+							"type": "text"
+						},
+						{
+							"key": "medium",
+							"value": "ff",
+							"type": "text"
+						},
+						{
+							"key": "whatsapp",
+							"value": "464364656",
+							"type": "text"
+						},
+						{
+							"key": "scope_phone",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "scope_email",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "scope_facebook",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "scope_twitter",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "scope_instagram",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "scope_whatsapp",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "scope_telegram",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "scope_medium",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/user-profile-update/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user-profile-update",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin side of user account settings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/user-account-settings/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user-account-settings",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin side of user profile payout wallet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "payout_wallet",
+							"value": "333",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/user-profile-payout-wallet/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user-profile-payout-wallet",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin side of user profile 2fa & email settings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "2fa",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/user-profile-fa-settings/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user-profile-fa-settings",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin side user email notification update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email_notification_settings",
+							"value": "[1,2,3]",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/email-notification-update/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"email-notification-update",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin side referrals of user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/referrals-of-user/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"referrals-of-user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Profile Referrals",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/admin/referrals",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"referrals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile Referrals",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/referrals",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"referrals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin side view of user activity",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/user-activity/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"user-activity",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile Activity",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/activity",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"activity"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
